@@ -18,11 +18,23 @@ function findUserByCredentials(credentials) {
     return userModel.findOne(credentials, {username: 1});
 }
 
+function updateUser(user) {
+    return userModel.findOneAndUpdate(
+        {username: user.username},
+        { $set: {
+                firstName : user.firstName,
+                lastName : user.lastName,
+                email: user.email
+            }
+        });
+}
+
 const api = {
     createUser: createUser,
     findAllUsers: findAllUsers,
     findUserById: findUserById,
-    findUserByCredentials: findUserByCredentials
+    findUserByCredentials: findUserByCredentials,
+    updateUser: updateUser
 };
 
 module.exports = api;
