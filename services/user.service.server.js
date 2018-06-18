@@ -8,39 +8,22 @@ module.exports = function (app) {
     app.put('/api/user', updateUser);
 
     var userModel = require('../models/user/user.model.server');
-
+    
 
     function createUser(req, res) {
         var user = req.body;
-        if (user) {
-            userModel.createUser(user)
-                .then(function (user) {
-                    req.session['currentUser'] = user;
-                    res.send(user);
-                })
-        } else {
-            res.errorCallback();
-        }
-    }
-
-//     function createUser(req, res) {
-//         var user = req.body;
-//         userModel.findUserByCredentials(user.username, function (err, count) {
-//         if (!count) {
-//             userModel.createUser(user)
-//                 .then(function (user) {
-//                     req.session['currentUser'] = user;
-//                     res.send(user);
-//                 });
-//             console.log("Inserting " + user.username);
-//             // return userModel.create(user)
-//         }
-//         else {
-//             res.send(0);
-//             console.log('Already Exists');
-//         }
-//     });
-// }
+        userModel.findByUsername(user.username).then(function(username) {
+            if (!username) {
+                userModel.createUser(user)
+                    .then(function (user) {
+                        req.session['currentUser'] = user;
+                        res.send(user);
+                    });
+            }
+            else {
+                res.send(500);
+            }})
+}
 
     function profile(req, res) {
         res.send(req.session['currentUser']);
