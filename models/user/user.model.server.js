@@ -22,6 +22,11 @@ function findByUsername(username) {
     return userModel.findOne({username: username});
 }
 
+function findByUsernameAndPassword(credentials){
+    return userModel.find(
+        {username: credentials.username, password: credentials.password})
+}
+
 function updateUser(user) {
     return userModel.findOneAndUpdate(
         {username: user.username},
@@ -39,7 +44,8 @@ const api = {
     findUserById: findUserById,
     findUserByCredentials: findUserByCredentials,
     updateUser: updateUser,
-    findByUsername: findByUsername
+    findByUsername: findByUsername,
+    findByUsernameAndPassword: findByUsernameAndPassword
 };
 
 module.exports = api;

@@ -8,7 +8,6 @@ module.exports = function (app) {
     app.put('/api/user', updateUser);
 
     var userModel = require('../models/user/user.model.server');
-    
 
     function createUser(req, res) {
         var user = req.body;
@@ -31,11 +30,17 @@ module.exports = function (app) {
 
     function login(req, res) {
         var credentials = req.body;
-        userModel.findUserByCredentials(credentials).then(function(user) {
-            req.session['currentUser'] = user;
-            delete user.password;
-            res.json(user);
-        })
+        userModel.findByUsernameAndPassword(credentials).then(function(potUser) {
+            if(potUser.length > 0) {
+                userModel.findUserByCredentials(credentials)
+                    .then(function (user) {
+                    req.session['currentUser'] = user;
+                    delete user.password;
+                    res.json(user);
+                })
+            } else {
+                res.send(500);
+            }})
     }
 
     function logout(req, res) {
