@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9fe9c751-fffc-4964-a2db-a8710c9a357f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/enrollment/enrollment.model.server.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/enrollment/enrollment.model.server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/section/section.model.server.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/section/section.model.server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/user/user.model.server.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/user/user.model.server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/section.service.server.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/section.service.server.js" afterDir="false" />
@@ -21,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="section.model.server.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/models/section/section.model.server.js">
+      <file leaf-file-name="enrollment.model.server.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/models/enrollment/enrollment.model.server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+            <state relative-caret-position="329">
+              <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -33,8 +33,8 @@
       <file leaf-file-name="section.service.server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/services/section.service.server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+            <state relative-caret-position="260">
+              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
             </state>
           </provider>
         </entry>
@@ -64,12 +64,12 @@
         <option value="$PROJECT_DIR$/models/user/user.schema.server.js" />
         <option value="$PROJECT_DIR$/models/section/section.schema.sever.js" />
         <option value="$PROJECT_DIR$/server.js" />
-        <option value="$PROJECT_DIR$/models/enrollment/enrollment.schema.server.js" />
-        <option value="$PROJECT_DIR$/models/enrollment/enrollment.model.server.js" />
         <option value="$PROJECT_DIR$/models/user/user.model.server.js" />
         <option value="$PROJECT_DIR$/services/user.service.server.js" />
         <option value="$PROJECT_DIR$/models/section/section.model.server.js" />
         <option value="$PROJECT_DIR$/services/section.service.server.js" />
+        <option value="$PROJECT_DIR$/models/enrollment/enrollment.schema.server.js" />
+        <option value="$PROJECT_DIR$/models/enrollment/enrollment.model.server.js" />
       </list>
     </option>
   </component>
@@ -121,12 +121,6 @@
             <path>
               <item name="webdev-summer1-nodejs-kdelsener" type="b2602c69:ProjectViewProjectNode" />
               <item name="webdev-summer1-nodejs-kdelsener" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="section" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webdev-summer1-nodejs-kdelsener" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webdev-summer1-nodejs-kdelsener" type="462c0819:PsiDirectoryNode" />
               <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -170,23 +164,23 @@
       <workItem from="1529000490186" duration="1778000" />
       <workItem from="1529009639658" duration="31487000" />
       <workItem from="1529239400495" duration="289000" />
-      <workItem from="1529249007145" duration="13954000" />
+      <workItem from="1529249007145" duration="32800000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48105000" />
+    <option name="totallyTimeSpent" value="66951000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25416997" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25416997" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27724138" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.27724138" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3382353" />
@@ -209,7 +203,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="18" />
+      <option name="time" value="58" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -272,24 +266,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/services/user.service.server.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/body-parser/lib/types/json.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="712">
-          <caret line="58" column="10" lean-forward="true" selection-start-line="58" selection-start-column="10" selection-end-line="58" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="39" column="34" lean-forward="true" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
+        <state relative-caret-position="166">
+          <caret line="88" column="18" selection-start-line="88" selection-start-column="18" selection-end-line="88" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/user/user.model.server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        <state relative-caret-position="195">
+          <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/user.service.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
         </state>
       </provider>
     </entry>
@@ -300,31 +294,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="34" lean-forward="true" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/enrollment/enrollment.schema.server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/enrollment/enrollment.model.server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/section.service.server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+        <state relative-caret-position="120">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/section/section.model.server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/section.service.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/enrollment/enrollment.model.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
         </state>
       </provider>
     </entry>

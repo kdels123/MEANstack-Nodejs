@@ -3,7 +3,7 @@ const userSchema = require('./user.schema.server');
 const userModel = mongoose.model('UserModel', userSchema);
 
 function createUser(user) {
-    return userModel.create(user);
+    return userModel.create(user)
 }
 
 function findAllUsers() {

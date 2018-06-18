@@ -1,10 +1,13 @@
 module.exports = function(app) {
 
     app.post('/api/course/:courseId/section', createSection);
+    app.delete('/api/section/:sectionId', deleteSection);
+    app.post('/api/section/:sectionId', updateSection);
     app.get('/api/course/:courseId/section', findSectionsForCourse);
     app.post('/api/section/:sectionId/enrollment', enrollStudentInSection);
+    app.delete('/api/enrollment/:enrollmentId', unenrollStudentInSection);
     app.get('/api/student/section', findSectionsForStudent);
-    app.delete('/api/section/:sectionId', deleteSection);
+
 
     var sectionModel = require('../models/section/section.model.server');
     var enrollmentModel = require('../models/enrollment/enrollment.model.server');
@@ -23,6 +26,13 @@ module.exports = function(app) {
         });
     }
 
+    function updateSection(req, res) {
+        var section = req.body;
+        sectionModel.updateSection(section).then(function (section) {
+            res.json(section)
+        });
+    }
+
     function findSectionsForCourse(req, res) {
         var courseId = req.params['courseId'];
         sectionModel.findSectionsForCourse(courseId).then(function (sections) {
@@ -36,10 +46,21 @@ module.exports = function(app) {
         var studentId = currentUser._id;
         var enrollment = {
             student: studentId,
-            section: sectionId,
+            section: sectionId
         };
         sectionModel.decrementSectionSeats(sectionId).then(function () {
             return enrollmentModel.enrollStudentInSection(enrollment)
+        })
+            .then(function (enrollment) {
+                res.json(enrollment);
+            })
+    }
+
+    function unenrollStudentInSection(req, res) {
+        var enrollmentId = req.body._id;
+        var sectionId = req.body.section;
+        sectionModel.incrementSectionSeats(sectionId).then(function () {
+            return enrollmentModel.unenrollStudentInSection(enrollmentId)
         })
             .then(function (enrollment) {
                 res.json(enrollment);
