@@ -17,7 +17,6 @@ function findSectionsForStudent(studentId) {
         .exec();
 }
 
-
 module.exports = {
     enrollStudentInSection: enrollStudentInSection,
     unenrollStudentInSection: unenrollStudentInSection,
