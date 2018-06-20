@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-mongoose.connect('https://cs5610-nodejs-kdelsener.herokuapp.com/');
+mongoose.connect('mongodb://heroku_m9p1z8qs:qssaft3ovcjh0eqst6eautp7bv@ds163410.mlab.com:63410/heroku_m9p1z8qs');
 
 var app = express();
 var session = require('express-session');
@@ -46,7 +46,7 @@ userService(app);
 var sectionService = require('./services/section.service.server')
 sectionService(app);
 
-app.listen(4000);
+app.listen(63410);
 
 // app.get('/', function (req, res) {
 //     res.send('Hello World')
