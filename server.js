@@ -46,7 +46,7 @@ userService(app);
 var sectionService = require('./services/section.service.server')
 sectionService(app);
 
-app.listen(63410);
+app.listen(process.env.PORT || 4000);
 
 // app.get('/', function (req, res) {
 //     res.send('Hello World')
