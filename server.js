@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/cs5610-summer1');
+mongoose.connect('https://cs5610-nodejs-kdelsener.herokuapp.com/');
 
 var app = express();
 var session = require('express-session');
